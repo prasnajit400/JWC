@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Video Frame Extractor</title></head>
+<body style="margin:0; background:black;">
+  <video id="v" src="file:///C:/Users/CAPTAIN/.gemini/antigravity/brain/0c20cbbf-4a52-4d7d-8abd-2e811dc5e44e/.user_uploaded/media_1794679135806_cd0fdcc1.mp4" width="1280" height="720" muted></video>
+  <script>
+    const v = document.getElementById('v');
+    v.currentTime = 3;
+    v.onseeked = () => {
+      document.title = "READY_FRAME";
+    };
+  </script>
+</body>
+</html>
