@@ -15,6 +15,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { COMPANY_INFO } from '../data/companyInfo';
 import { SERVICES_CATEGORIES } from '../data/servicesData';
 
@@ -128,7 +129,7 @@ export default function Contact() {
           {/* 2. WhatsApp Card */}
           <div className="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover:shadow-card-hover hover:border-slate-300 transition-all space-y-3">
             <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
-              <MessageSquare className="w-6 h-6" />
+              <WhatsAppIcon className="w-6 h-6 fill-current text-emerald-600" />
             </div>
             <div>
               <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block font-semibold">

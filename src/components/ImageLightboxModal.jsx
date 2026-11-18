@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { X, Maximize2, MessageSquare, Phone, Download } from 'lucide-react';
+import { X, Maximize2, Phone, Download } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { COMPANY_INFO } from '../data/companyInfo';
 
 export default function ImageLightboxModal({ isOpen, imageSrc, title, subtitle, category, onClose, onInquire }) {
@@ -81,7 +82,7 @@ export default function ImageLightboxModal({ isOpen, imageSrc, title, subtitle, 
               onClick={handleWhatsApp}
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-mono font-semibold transition-all shadow-sm"
             >
-              <MessageSquare className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-4 h-4 fill-white" />
               <span>Inquire This on WhatsApp</span>
             </button>
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Send, Phone, MessageSquare, CheckCircle2, ShieldCheck, Flame } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import WhatsAppIcon from './WhatsAppIcon';
 import { COMPANY_INFO } from '../data/companyInfo';
 import { SERVICES_CATEGORIES } from '../data/servicesData';
 
@@ -238,9 +239,9 @@ export default function QuoteModal({ isOpen, onClose, initialService = null, ini
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm transition-all disabled:opacity-50 shadow-sm"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all disabled:opacity-50 shadow-sm"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <WhatsAppIcon className="w-4 h-4 fill-white" />
                   <span>Send WhatsApp Inquiry</span>
                 </button>
 

@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import Card3D from '../components/Card3D';
 import ImageLightboxModal from '../components/ImageLightboxModal';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { COMPANY_INFO } from '../data/companyInfo';
 import { SERVICES_CATEGORIES } from '../data/servicesData';
 import { GALLERY_PROJECTS } from '../data/galleryData';
@@ -55,7 +56,7 @@ export default function Home({ onOpenQuote }) {
       {/* =========================================================================
           CINEMATIC FULL-SCREEN HERO WITH LIVE WELDING VIDEO BACKGROUND
       ========================================================================= */}
-      <section className="relative min-h-[92vh] flex items-center pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden border-b border-slate-900 bg-slate-950">
+      <section className="relative min-h-[92vh] flex items-center pt-36 sm:pt-40 md:pt-44 pb-20 md:pb-24 overflow-hidden border-b border-slate-900 bg-slate-950">
         
         {/* Full-Screen Background Welding Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -629,7 +630,7 @@ export default function Home({ onOpenQuote }) {
                     onClick={handlePlanWhatsApp}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-mono text-xs font-bold uppercase tracking-wider shadow-sm transition-all"
                   >
-                    <MessageSquare className="w-4 h-4 fill-white" />
+                    <WhatsAppIcon className="w-4 h-4 fill-white" />
                     <span>Send Specs via WhatsApp</span>
                   </button>
                 </div>
@@ -849,7 +850,7 @@ export default function Home({ onOpenQuote }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono text-xs font-bold uppercase tracking-wider shadow-sm transition-all"
               >
-                <MessageSquare className="w-4 h-4 fill-white" />
+                <WhatsAppIcon className="w-4 h-4 fill-white" />
                 <span>WhatsApp Message</span>
               </a>
 

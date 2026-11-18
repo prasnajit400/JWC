@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, MessageSquare } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { COMPANY_INFO } from '../data/companyInfo';
 
 export default function FloatingActions() {
@@ -17,7 +18,7 @@ export default function FloatingActions() {
         </a>
       </div>
 
-      {/* 2. Right Side: Direct WhatsApp Message Button */}
+      {/* 2. Right Side: Direct WhatsApp Message Button with Official WhatsApp Icon */}
       <div className="fixed bottom-6 right-5 z-40 pointer-events-auto">
         <a
           href={COMPANY_INFO.whatsapp}
@@ -26,7 +27,7 @@ export default function FloatingActions() {
           aria-label="Chat on WhatsApp"
           className="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white flex items-center justify-center shadow-[0_8px_20px_rgba(16,185,129,0.45)] hover:shadow-[0_12px_28px_rgba(16,185,129,0.65)] hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-white/20"
         >
-          <MessageSquare className="w-6 h-6 text-white fill-white" />
+          <WhatsAppIcon className="w-7 h-7 text-white fill-current" />
           <span className="sr-only">WhatsApp Chat</span>
         </a>
       </div>
