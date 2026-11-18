@@ -14,7 +14,7 @@ export const COMPANY_INFO = {
     secondary: "+91 9583157584",
     secondaryRaw: "9583157584",
   },
-  whatsapp: "https://wa.me/919337657584",
+  whatsapp: "https://wa.me/919337657584?text=" + encodeURIComponent("Hello Prashanjit Jena! 👋\n\nI visited your Jena Welding Company website and would like to inquire about your fabrication services (Gates / Railings / Food Stalls / Sheds / Custom Work).\n\nPlease share your catalog and price quotation. Thank you!"),
   email: "jbagspack@gmail.com",
   instagram: "@Jena_welding_company",
   instagramUrl: "https://instagram.com/Jena_welding_company",

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, ShieldCheck, ArrowUpRight, Flame, Clock, Award } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyInfo';
 import { SERVICES_CATEGORIES } from '../data/servicesData';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Footer({ onOpenQuote }) {
   return (
@@ -144,11 +145,12 @@ export default function Footer({ onOpenQuote }) {
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-white block">Call / WhatsApp:</strong>
-                  <a href={`tel:${COMPANY_INFO.phones.primaryRaw}`} className="text-emerald-400 font-mono hover:underline block">
-                    {COMPANY_INFO.phones.primary}
+                  <a href={`tel:${COMPANY_INFO.phones.primaryRaw}`} className="text-white font-mono hover:text-orange-400 block font-semibold">
+                    Call: {COMPANY_INFO.phones.primary}
                   </a>
-                  <a href={`tel:${COMPANY_INFO.phones.secondaryRaw}`} className="text-slate-400 font-mono hover:underline block">
-                    {COMPANY_INFO.phones.secondary}
+                  <a href={COMPANY_INFO.whatsapp} target="_blank" rel="noopener noreferrer" className="text-emerald-400 font-mono hover:text-emerald-300 flex items-center gap-1.5 mt-0.5 font-semibold">
+                    <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                    <span>Chat on WhatsApp</span>
                   </a>
                 </div>
               </div>

@@ -200,30 +200,11 @@ export default function Navbar({ onOpenQuote }) {
           </div>
         </div>
 
-        {/* Mobile Dropdown Drawer */}
+        {/* Mobile Dropdown Drawer - Clean Tabs First */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl">
-            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2 text-xs text-emerald-700 font-mono font-medium">
-              <ShieldCheck className="w-4 h-4 shrink-0 text-emerald-600" />
-              <span>UDYAM REG: <strong className="text-slate-900">{COMPANY_INFO.udyam}</strong></span>
-            </div>
-
-            <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1.5 text-xs font-mono text-slate-700">
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-emerald-600" />
-                <a href={`tel:${COMPANY_INFO.phones.primaryRaw}`} className="font-bold text-slate-900">{COMPANY_INFO.phones.primary}</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-sky-600" />
-                <a href={`mailto:${COMPANY_INFO.email}`} className="text-slate-800">{COMPANY_INFO.email}</a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Instagram className="w-3.5 h-3.5 text-pink-600" />
-                <a href={COMPANY_INFO.instagramUrl} target="_blank" rel="noopener noreferrer" className="text-slate-800">{COMPANY_INFO.instagram}</a>
-              </div>
-            </div>
-
-            <nav className="space-y-1 pt-1">
+          <div className="md:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-5 space-y-3 shadow-xl">
+            {/* Primary Navigation Tabs */}
+            <nav className="space-y-1.5">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
@@ -231,10 +212,10 @@ export default function Navbar({ onOpenQuote }) {
                   end={link.path === '/'}
                   onClick={() => setMobileMenuOpen(false)}
                   className={({ isActive }) =>
-                    `flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition-colors ${
+                    `flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold tracking-wide transition-colors ${
                       isActive
-                        ? 'text-orange-600 bg-orange-50 font-bold border border-orange-200'
-                        : 'text-slate-700 hover:bg-slate-50'
+                        ? 'text-orange-600 bg-orange-50 font-bold border border-orange-200 shadow-sm'
+                        : 'text-slate-800 hover:bg-slate-50'
                     }`
                   }
                 >
@@ -244,12 +225,13 @@ export default function Navbar({ onOpenQuote }) {
               ))}
             </nav>
 
-            <div className="pt-2 grid grid-cols-2 gap-2">
+            {/* Quick Action Buttons */}
+            <div className="pt-2 border-t border-slate-100 grid grid-cols-2 gap-2">
               <a
                 href={COMPANY_INFO.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold font-mono shadow-sm"
+                className="flex items-center justify-center gap-2 px-3 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold font-mono shadow-sm transition-transform active:scale-95"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-white" />
                 <span>WhatsApp</span>
@@ -260,9 +242,9 @@ export default function Navbar({ onOpenQuote }) {
                   setMobileMenuOpen(false);
                   onOpenQuote();
                 }}
-                className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-orange-600 text-white text-xs font-bold"
+                className="flex items-center justify-center gap-2 px-3 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow-sm transition-transform active:scale-95"
               >
-                <Flame className="w-3.5 h-3.5" />
+                <Flame className="w-4 h-4" />
                 <span>Get Quote</span>
               </button>
             </div>

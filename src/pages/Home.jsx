@@ -726,7 +726,7 @@ export default function Home({ onOpenQuote }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 font-mono text-xs font-semibold transition-all"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 fill-emerald-600" />
                   <span>Direct WhatsApp</span>
                 </a>
               </div>
